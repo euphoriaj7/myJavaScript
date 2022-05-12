@@ -20,6 +20,7 @@ const aCourse = {
 };
 
 function setCourseInfo(course) {
-    document.querySelector('#courseName')
-    document.querySelector('#courseCode')
+    document.querySelector('#courseName').textContent = course.name;
+    document.querySelector('#courseCode').textContent = course.courseCode;
 }
+setCourseInfo(aCourse);
