@@ -22,5 +22,14 @@ const aCourse = {
 function setCourseInfo(course) {
     document.querySelector('#courseName').textContent = course.name;
     document.querySelector('#courseCode').textContent = course.courseCode;
-}
+};
+
+function sectionTemplate(section) {
+    return `<tr><td>${section.sectionNum}</td><td>${section.roomNum}</td><td>${section.enrolled}</td><td>${section.days}</td><td>${section.instructor}</td></tr>`
+};
+
+function tableCreator(sections) {
+    const element = document.querySelector('#sections');
+    const htmlString = sections.map(sectionTemplate);
+};
 setCourseInfo(aCourse);
