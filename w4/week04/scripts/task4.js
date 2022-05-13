@@ -7,7 +7,7 @@ let myInfo = {
         // Step 2: Inside of the object, add a property named name with a value of your name as a string
         name: 'Brother Pitcher',
         // Step 3: Add another property named photo with a value of the image path and name (used in Task 2) as a string
-        photo: '../images/IMG_4867.jpg',
+        photo: '../images/IMG_4866.jpg',
         age: 27,
         gender: 'male',
         // Step 4: Add another property named favoriteFoods with a value of an array of your favorite foods as strings ( hint: [] )
