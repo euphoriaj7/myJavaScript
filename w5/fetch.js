@@ -1,5 +1,5 @@
 const url = "https://pokeapi.co/api/v2/pokemon/ditto";
-const outputElement = documen.querySelector("#output");
+const outputElement = document.querySelector("#output");
 let results = null;
 async function getPokemon(url) {
     const response = await fetch(url);
