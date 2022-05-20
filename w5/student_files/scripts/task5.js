@@ -3,7 +3,7 @@
 /* IF/ELSE IF */
 
 // Step 1: Declare and initialize a new variable to hold the current date
-let today = new Date();
+const today = new Date();
 // Step 2: Declare another variable to hold the day of the week
 let dayOfWeek;
 // Step 3: Using the variable declared in Step 1, assign the value of the variable declared in Step 2 to the day of the week ( hint: getDay() )
@@ -70,7 +70,7 @@ let templeList = [];
 // - Creates an HTML <img> element and add the temple's imageUrl property to the src attribute and the temple's templeName property to the alt attribute
 // - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> element as children
 // - Appends the <article> element to the HTML element with an ID of temples
-let output = (temples) => {
+const output = (temples) => {
     temples.forEach((temple) => {
         let article = document.createElement("article");
 
@@ -99,8 +99,8 @@ let output = (temples) => {
 // Step 4: In the function, using the built-in fetch method, call this absolute URL: 'https://byui-cse.github.io/cse121b-course/week05/temples.json'. Create a variable to hold the response from your fetch. You should have the program wait on this line until it finishes.
 // Step 5: Convert your fetch response into a Javascript object ( hint: .json() ). Store this in the templeList variable you declared earlier (Step 1). Make sure the the execution of the code waits here as well until it finishes.
 // Step 6: Finally, call the output function and pass it the list of temples. Execute your getTemples function to make sure it works correctly.
-let getTemples = async() => {
-    let response = await fetch(
+const getTemples = async() => {
+    const response = await fetch(
         "https://byui-cse.github.io/cse121b-course/week05/temples.json"
     );
     temple = await response.json();
@@ -109,14 +109,14 @@ let getTemples = async() => {
 };
 getTemples();
 // Step 7: Declare a function named reset that clears all of the <article> elements from the HTML element with an ID of temples
-let reset = () => {
+const reset = () => {
     document.querySelector("temples").innerHTML = "";
 };
 // Step 8: Declare a function named sortBy that does the following:
 // - Calls the reset function
 // - Sorts the global temple list by the currently selected value of the HTML element with an ID of sortBy
 // - Calls the output function passing in the sorted list of temples
-let sortBy = () => {
+const sortBy = () => {
     reset();
     getTemples();
 
