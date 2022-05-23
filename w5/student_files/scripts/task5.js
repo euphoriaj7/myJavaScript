@@ -58,7 +58,7 @@ switch (dayOfWeek) {
 // Step 1: Assign the value of the first message variable to the HTML element with an ID of message1
 document.querySelector("#message1").textContent = message1;
 // Step 2: Assign the value of the second message variable to the HTML element with an ID of message2
-document.querySelector("message2").textContent = message2;
+document.querySelector("#message2").textContent = message2;
 /* FETCH */
 // Step 1: Declare a global empty array variable to store a list of temples
 let templeList = [];
@@ -85,7 +85,7 @@ const output = (temples) => {
 
         let img = document.createElement("img");
         img.setAttribute("src", temple.imageUrl);
-        img.setAttribute("alt", templ.templeName);
+        img.setAttribute("alt", temple.templeName);
 
         article.appendChild(templeName);
         article.appendChild(location);
@@ -110,7 +110,7 @@ const getTemples = async() => {
 getTemples();
 // Step 7: Declare a function named reset that clears all of the <article> elements from the HTML element with an ID of temples
 const reset = () => {
-    document.querySelector("temples").innerHTML = "";
+    document.querySelector("#temples").innerHTML = "";
 };
 // Step 8: Declare a function named sortBy that does the following:
 // - Calls the reset function
@@ -127,19 +127,19 @@ const sortBy = () => {
             output(
                 templeList.sort((temple1, temple2) => {
                     let templeName1 = temple1.templeName.toLowerCase();
-                    let templeName2 = temple.templeName.toLowerCase();
-                    if (templeName1 < templeName2) return1;
+                    let templeName2 = temple2.templeName.toLowerCase();
+                    if (templeName1 < templeName2) return -1;
                     else if (templeName1 > templeName2) return 1;
                     else return 0;
                 })
             );
             break;
-        case "templeNameDscending":
+        case "templeNameDescending":
             output(
                 templeList.sort((temple1, temple2) => {
                     let templeName1 = temple1.templeName.toLowerCase();
                     let templeName2 = temple2.templeName.toLowerCase();
-                    if (templeName1 > templeName2) return1;
+                    if (templeName1 > templeName2) return -1;
                     else if (templeName1 < templeName2) return 1;
                     else return 0;
                 })
@@ -159,7 +159,7 @@ const sortBy = () => {
 };
 // getTemples()
 // Step 9: Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
-document.querySelector("sortBy").addEventListener("change", sortBy);
+document.querySelector("#sortBy").addEventListener("change", sortBy);
 /* STRETCH */
 
 // Consider adding a "Filter by" feature that allows users to filter the list of temples
