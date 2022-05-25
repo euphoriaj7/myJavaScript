@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" ref="dadJokeGenerator.css">
+    <!-- <link rel="stylesheet" ref="dadJokeGenerator.css"> -->
+    <script src="dadJokeGenerator.js" defer></script>
 </head>
 <style>
     h1 {
@@ -30,9 +31,9 @@
 
 <body>
     <H1>Want to hear a dad Joke?</H1>
-    <button onclick="tellJoke()">Click Here</button>
-    <script src="dadJokeGenerator.js">
-    </script>
+    <button onclick="fetchJoke()">Click Here</button>
+    <div id="displayJoke"></div>
 </body>
+
 
 </html>
