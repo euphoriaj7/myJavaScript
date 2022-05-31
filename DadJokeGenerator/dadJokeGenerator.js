@@ -1,11 +1,14 @@
 'use strict';
 
 const myFetch = 'https://icanhazdadjoke.com/';
+let prank = true;
 
 function tellJoke(joke) {
     const display = document.querySelector("#displayJoke");
     // console.log(display)
-    display.append(joke.joke)
+    // console.log(joke.joke)
+    // display.append(joke.joke)
+    display.innerHTML = joke.joke;
 }
 
 async function fetchJoke() {
@@ -26,3 +29,21 @@ async function fetchJoke() {
     console.log(pull);
     return pull;
 }
+
+function startup() {
+    let button = document.querySelector("button")
+    button.addEventListener("click", (Event) => {
+        if (prank == true) {
+            document.getElementById("displayJoke").innerHTML = "A Joke!";
+            const myTimeOut = setTimeout(() => {
+                document.getElementById("displayJoke").innerHTML = "ha just kidding, click on the button again to get a real joke ;)";
+            }, 5000);
+            prank = false;
+
+        } else {
+            fetchJoke();
+        }
+    })
+
+}
+startup();
