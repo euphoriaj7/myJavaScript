@@ -36,7 +36,7 @@ function startup() {
         if (prank == true) {
             document.getElementById("displayJoke").innerHTML = "A Joke!";
             const myTimeOut = setTimeout(() => {
-                document.getElementById("displayJoke").innerHTML = "ha just kidding, click on the button again to get a real joke ;)";
+                document.getElementById("displayJoke").innerHTML = "Just kidding, click on the button again to get a real joke ;)";
             }, 5000);
             prank = false;
 
