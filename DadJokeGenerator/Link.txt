@@ -1,0 +1,1 @@
+URL = https://euphoriaj7.github.io/myJavaScript/DadJokeGenerator/dadJokeGenerator.html
